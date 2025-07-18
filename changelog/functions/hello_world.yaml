@@ -4,7 +4,7 @@ metadata:
   name: hello-world
   namespace: schemahero
 spec:
-  database: postgres
+  database: changelog
   name: hello_world
   schema:
     postgres:
