@@ -5,7 +5,6 @@ metadata:
   namespace: schemahero-changelog
 spec:
   database: postgres
-  removeOnDeletion: true
   name: hello_world
   schema:
     postgres:
