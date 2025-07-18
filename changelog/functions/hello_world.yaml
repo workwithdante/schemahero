@@ -1,0 +1,15 @@
+apiVersion: schemas.schemahero.io/v1alpha4
+kind: Function
+metadata:
+  name: hello-world
+  namespace: database
+spec:
+  database: mabecenter-db
+  removeOnDeletion: true
+  postgres:
+    schema: public
+    lang: SQL
+    params: []            # sin parámetros
+    return: text
+    as: |
+      SELECT 'Hello, world!'::text;
