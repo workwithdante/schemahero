@@ -4,7 +4,7 @@ metadata:
   name: hello-world
   namespace: schemahero-changelog
 spec:
-  database: postgres
+  database: mabecenter-db
   name: hello_world
   schema:
     postgres:
