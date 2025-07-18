@@ -6,10 +6,12 @@ metadata:
 spec:
   database: postgres
   removeOnDeletion: true
-  postgres:
-    schema: company
-    lang: SQL
-    params: []            # sin parámetros
-    return: text
-    as: |
-      SELECT 'Hello, world!'::text;
+  name: hello_world
+  schema:
+    postgres:
+      schema: company
+      lang: PLpgSQL
+      return: []
+      as: |-
+        SELECT 'Hello, world!'::text;
+      params: []   
