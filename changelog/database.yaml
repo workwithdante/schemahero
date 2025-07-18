@@ -1,15 +1,18 @@
-apiVersion: schemas.schemahero.io/v1alpha4
+apiVersion: databases.schemahero.io/v1alpha4
 kind: Database
 metadata:
   name: mabecenter-db
-  namespace: database
+  namespace: schemahero-changelog
 spec:
   connection:
-    secretKeyRef:
-      name: schemahero-database-secret
-      keys:
-        host:     host
-        port:     port
-        user:     user
-        password: password
-        database: database
+    postgres:
+      # En lugar de inline, leemos todos los valores desde un Secret
+      secretKeyRef:
+        name: schemahero-database-secret
+        # Estas keys deben existir en tu Secret
+        keys:
+          host:     host
+          port:     port
+          user:     user
+          password: password
+          database: database
