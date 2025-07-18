@@ -1,8 +1,11 @@
 apiVersion: databases.schemahero.io/v1alpha4
 kind: Database
 metadata:
-  name: mabecenter-db
+  name: postgres
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
+  immediateDeploy: true
   connection:
     postgres:
       uri:

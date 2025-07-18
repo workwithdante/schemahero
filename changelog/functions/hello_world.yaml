@@ -2,8 +2,10 @@ apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
   name: hello-world
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
-  database: mabecenter-db
+  database: postgres
   immediateDeploy: true
   name: hello_world
   schema:
