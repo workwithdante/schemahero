@@ -1,7 +1,7 @@
 apiVersion: databases.schemahero.io/v1alpha4
 kind: Database
 metadata:
-  name: db-dev
+  name: postgres
   namespace: schemahero-changelog
   annotations:
     argocd.argoproj.io/hook: PreSync
