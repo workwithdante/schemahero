@@ -2,7 +2,7 @@ apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
   name: hello-world
-  namespace: schemahero-changelog
+  namespace: schemahero
 spec:
   database: postgres
   name: hello_world
