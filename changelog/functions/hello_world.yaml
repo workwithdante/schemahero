@@ -4,6 +4,7 @@ metadata:
   name: hello-world
 spec:
   database: mabecenter-db
+  immediateDeploy: true
   name: hello_world
   schema:
     postgres:
