@@ -5,6 +5,7 @@ metadata:
   namespace: schemahero-changelog
 spec:
   database: mabecenter-db
+  removeOnDeletion: true
   name: hello_world
   schema:
     postgres:
