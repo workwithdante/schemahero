@@ -2,7 +2,6 @@ apiVersion: databases.schemahero.io/v1alpha4
 kind: Database
 metadata:
   name: mabecenter-db
-  namespace: schemahero-changelog
 spec:
   connection:
     postgres:
