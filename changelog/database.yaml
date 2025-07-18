@@ -3,8 +3,6 @@ kind: Database
 metadata:
   name: postgres
   namespace: schemahero-changelog
-  annotations:
-    argocd.argoproj.io/hook: PreSync
 spec:
   connection:
     postgres:
