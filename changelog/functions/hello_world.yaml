@@ -2,10 +2,11 @@ apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
   name: hello-world
+  namespace: schemahero-changelog
   annotations:
     argocd.argoproj.io/hook: PreSync
 spec:
-  database: postgres
+  database: db-dev
   name: hello_world
   schema:
     postgres:
