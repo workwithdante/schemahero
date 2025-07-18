@@ -11,7 +11,7 @@ spec:
     postgres:
       schema: company
       lang: PLpgSQL
-      return: []
+      return: NULL
       as: |-
         SELECT 'Hello, world!'::text;
       params: []   
