@@ -6,7 +6,6 @@ metadata:
     argocd.argoproj.io/hook: PreSync
 spec:
   database: postgres
-  immediateDeploy: true
   name: hello_world
   schema:
     postgres:
