@@ -1,0 +1,15 @@
+apiVersion: schemas.schemahero.io/v1alpha4
+kind: Database
+metadata:
+  name: mabecenter-db
+  namespace: database
+spec:
+  connection:
+    secretKeyRef:
+      name: schemahero-database-secret
+      keys:
+        host:     host
+        port:     port
+        user:     user
+        password: password
+        database: database

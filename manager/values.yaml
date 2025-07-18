@@ -1,0 +1,6 @@
+schemahero:
+  service:
+    port: 443
+
+  image:
+    name: schemahero/schemahero-manager
