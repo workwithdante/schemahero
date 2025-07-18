@@ -1,0 +1,10 @@
+apiVersion: v2
+name: schemahero-sierra-group
+description: Wrapper chart for schemahero
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: schemahero
+    version: "1.3.4"  # Especifica la versión del chart de velero que deseas usar
+    repository: "oci://ghcr.io/schemahero/helm/schemahero"  # URL del repositorio de velero
