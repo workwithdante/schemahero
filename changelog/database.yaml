@@ -6,13 +6,8 @@ metadata:
 spec:
   connection:
     postgres:
-      # En lugar de inline, leemos todos los valores desde un Secret
-      secretKeyRef:
-        name: schemahero-database-secret
-        # Estas keys deben existir en tu Secret
-        keys:
-          host:     host
-          port:     port
-          user:     user
-          password: password
-          database: database
+      uri:
+        valueFrom:
+          secretKeyRef:
+            name: schemahero-database-secret
+            key: uri
