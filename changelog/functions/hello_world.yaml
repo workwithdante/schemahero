@@ -2,12 +2,12 @@ apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
   name: hello-world
-  namespace: database
+  namespace: schemahero-changelog
 spec:
-  database: mabecenter-db
+  database: postgres
   removeOnDeletion: true
   postgres:
-    schema: public
+    schema: company
     lang: SQL
     params: []            # sin parámetros
     return: text
