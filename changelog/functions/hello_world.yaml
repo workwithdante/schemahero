@@ -7,7 +7,7 @@ spec:
   name: get_user_count
   schema:
     postgres:
-      schema: public
+      schema: company
       lang: PLpgSQL
       return: bigint
       as: |-
