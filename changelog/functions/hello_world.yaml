@@ -1,10 +1,10 @@
 apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
-  name: other
+  name: users 
 spec:
   database: changelog
-  name: get_user_count_with_parameter
+  name: get_user_count
   schema:
     postgres:
       schema: public
@@ -14,9 +14,6 @@ spec:
         DECLARE
             user_count bigint;
         BEGIN
-            SELECT COUNT(*) INTO user_count FROM table_name;
+            SELECT COUNT(*) INTO user_count FROM users;
             RETURN user_count;
         END;
-      params:
-        - name: table_name
-          type: text
