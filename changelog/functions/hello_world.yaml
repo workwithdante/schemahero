@@ -1,7 +1,8 @@
 apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
-  name: users 
+  name: users
+  namespace: schemahero-changelog
 spec:
   database: changelog
   name: get_user_count
