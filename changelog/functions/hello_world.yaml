@@ -1,13 +1,40 @@
-apiVersion: functions.schemahero.io/v1alpha4
+apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
-  name: changelog-hello-world
+  name: hello-world
+  namespace: schemahero-changelog
 spec:
+  # Nombre del Database CR al que apunta
   database: changelog
+
+  # Nombre interno de la función en PostgreSQL
   name: hello_world
+
+  # Si se elimina el CR, la función se borrará de la base de datos
+  removeOnDeletion: true
+
   schema:
     postgres:
-      lang: SQL
+      # Esquema dentro de la BD donde se creará la función
+      schema: public
+
+      # Lenguaje de la función: PLpgSQL o SQL
+      lang: PLpgSQL
+
+      # Definición del cuerpo de la función
       as: |-
-        SELECT 'Hello, world!'::text;
-      params: []   
+        BEGIN
+          RETURN UPPER(input_text);
+        END;
+
+      # Parámetros de entrada/salida
+      params:
+        - name: input_text
+          type: text
+          mode: IN
+
+      # Tipo de retorno
+      return: text
+
+      # ¿Devuelve un SET de filas?
+      returnSet: false
