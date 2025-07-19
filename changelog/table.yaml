@@ -4,7 +4,8 @@ metadata:
   name: videos
 spec:
   database: changelog
-  name: config.videos
+  name: videos
+  schema: config
   schema:
     postgres:
       primaryKey:
