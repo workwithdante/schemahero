@@ -7,7 +7,6 @@ spec:
   name: videos
   schema:
     postgres:
-      schema: config
       primaryKey:
       - id
       columns:
@@ -15,7 +14,7 @@ spec:
         type: text
         constraints:
           notNull: true
-      - name: title
+      - name: titles
         type: text
         constraints:
           notNull: true

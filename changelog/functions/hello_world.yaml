@@ -4,7 +4,7 @@ metadata:
   name: users
 spec:
   database: changelog
-  name: get_user_count_2
+  name: get_user_count
   schema:
     postgres:
       schema: config
