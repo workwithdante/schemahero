@@ -7,6 +7,7 @@ spec:
   name: videos
   schema:
     postgres:
+      schema: config
       primaryKey:
       - id
       columns:
