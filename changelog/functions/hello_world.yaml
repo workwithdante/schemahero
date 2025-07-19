@@ -1,8 +1,7 @@
 apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
-  name: hello-world
-  namespace: schemahero-changelog
+  name: changelog-hello-world
 spec:
   database: changelog
   name: hello_world
