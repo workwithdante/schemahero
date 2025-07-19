@@ -3,7 +3,6 @@ apiVersion: schemas.schemahero.io/v1alpha4
 kind: Table
 metadata:
   name: videos
-  namespace: schemahero-changelog
 spec:
   database: changelog
   name: videos
