@@ -1,17 +1,11 @@
+
 apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
-  name: hello-world
+  name: testing
 spec:
-  # Nombre del Database CR al que apunta
   database: changelog
-
-  # Nombre interno de la función en PostgreSQL
-  name: hello_world
-
-  # Si se elimina el CR, la función se borrará de la base de datos
-  removeOnDeletion: true
-
+  name: testing
   schema:
     postgres:
       # Esquema dentro de la BD donde se creará la función
