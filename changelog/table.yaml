@@ -15,7 +15,7 @@ spec:
         type: text
         constraints:
           notNull: true
-      - name: titlesss
+      - name: title
         type: text
         constraints:
           notNull: true
