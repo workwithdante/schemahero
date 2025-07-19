@@ -2,7 +2,7 @@ apiVersion: databases.schemahero.io/v1alpha4
 kind: Database
 metadata:
   name: changelog
-  namespace: schemahero
+  namespace: schemahero-changelog
 spec:
   connection:
     postgres:
