@@ -8,7 +8,6 @@ spec:
   name: videos
   schema:
     postgres:
-      schema: company
       primaryKey:
       - id
       columns:

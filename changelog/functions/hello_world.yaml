@@ -7,7 +7,6 @@ spec:
   name: hello_world
   schema:
     postgres:
-      schema: company
       lang: SQL
       as: |-
         SELECT 'Hello, world!'::text;
