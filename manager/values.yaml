@@ -4,3 +4,4 @@ schemahero:
 
   image:
     name: schemahero/schemahero-manager
+    tag: "v0.21.0"
