@@ -6,6 +6,7 @@ metadata:
 spec:
   database: changelog
   name: get_user_count
+  immediateDeploy: true
   schema:
     postgres:
       schema: public
