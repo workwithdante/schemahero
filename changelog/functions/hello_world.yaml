@@ -1,4 +1,4 @@
-apiVersion: schemas.schemahero.io/v1alpha4
+apiVersion: functions.schemahero.io/v1alpha4
 kind: Function
 metadata:
   name: changelog-hello-world
