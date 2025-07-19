@@ -4,6 +4,7 @@ metadata:
   name: changelog
   namespace: schemahero-changelog
 spec:
+  immediateDeploy: true
   connection:
     postgres:
       uri:
