@@ -1,33 +1,22 @@
-
 apiVersion: schemas.schemahero.io/v1alpha4
 kind: Function
 metadata:
-  name: testing
+  name: other
 spec:
   database: changelog
-  name: testing
+  name: get_user_count_with_parameter
   schema:
     postgres:
-      # Esquema dentro de la BD donde se creará la función
       schema: public
-
-      # Lenguaje de la función: PLpgSQL o SQL
       lang: PLpgSQL
-
-      # Definición del cuerpo de la función
+      return: bigint
       as: |-
+        DECLARE
+            user_count bigint;
         BEGIN
-          RETURN UPPER(input_text);
+            SELECT COUNT(*) INTO user_count FROM table_name;
+            RETURN user_count;
         END;
-
-      # Parámetros de entrada/salida
       params:
-        - name: input_text
+        - name: table_name
           type: text
-          mode: IN
-
-      # Tipo de retorno
-      return: text
-
-      # ¿Devuelve un SET de filas?
-      returnSet: false
